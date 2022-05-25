@@ -1,0 +1,56 @@
+version: '3.8'
+name: "minibank"
+services:
+ storage:
+  container_name: minibank_postgresdb
+  image: postgres:13
+  restart: always
+  ports:
+   - "5432:5432"
+  environment:
+   POSTGRES_DB: minibank_db
+   POSTGRES_USER: minibank_user
+   POSTGRES_PASSWORD: 1234
+  healthcheck:
+   test: ["CMD-SHELL", "pg-isready -d minibank_db -U minibank_user"]
+   interval: 5s
+   timeout: 5s
+   retries: 5
+  volumes:
+  - ~/volumes/postgres:/var/lib/postgressql/data
+
+ pgadmin:
+  container_name: minbank_pgadmin
+  image: dpage/pgadmin4:6.8
+  environment:
+   PGADMIN_DEFAULT_EMAIL: "admin@minibank.com"
+   PGADMIN_DEFAULT_PASSWORD: "minibank_admin"
+   PGADMIN_CONFIG_SERVER_MODE: "False"
+  volumes:
+   - ./pgadmin:/var/lib/pgadmin
+  ports:
+   - "5050:80"
+  restart: always
+  deploy:
+    resources:
+     limits:
+      cpus: '0.5'
+      memory: 1G
+  depends_on:
+   storage:
+    condition: service_started
+
+ app:
+  container_name: minibank_service
+  restart: always
+  build:
+   context: ..
+   dockerfile: build/Minibank.Dockerfile
+  depends_on:
+   storage:
+    condition: service_started
+  ports:
+   - "5000:5000"
+   - "5001:5001"
+  environment:
+   ConnectionString: host=storage;Port=5432;Database=minibank_db;Username=minibank_user;Password=1234

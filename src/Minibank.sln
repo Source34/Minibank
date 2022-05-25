@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32210.238
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Minibank.Web", "Minibank.Web\Minibank.Web.csproj", "{8C3B1B26-ABCC-4ED5-8244-5473296C4078}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Minibank.Core", "Minibank.Core\Minibank.Core.csproj", "{0510BEBB-45BF-42BE-B5A0-17BBDA40CF89}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Minibank.Data", "Minibank.Data\Minibank.Data.csproj", "{C07A69AC-002A-4D45-A143-6B1B5C55B990}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{C5BC44E8-A159-482D-B271-9F799423FD5B}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+		..\build\docker-compose.yml = ..\build\docker-compose.yml
+		..\build\Minibank.Dockerfile = ..\build\Minibank.Dockerfile
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{026C2D60-DC8C-41A2-8BB6-A18C3EAC8C84}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Minibank.Core.Tests", "Minibank.Core.Tests\Minibank.Core.Tests.csproj", "{3689094D-B888-4604-AB1C-97EC4EFF24A3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8C3B1B26-ABCC-4ED5-8244-5473296C4078}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8C3B1B26-ABCC-4ED5-8244-5473296C4078}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8C3B1B26-ABCC-4ED5-8244-5473296C4078}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8C3B1B26-ABCC-4ED5-8244-5473296C4078}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0510BEBB-45BF-42BE-B5A0-17BBDA40CF89}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0510BEBB-45BF-42BE-B5A0-17BBDA40CF89}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0510BEBB-45BF-42BE-B5A0-17BBDA40CF89}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0510BEBB-45BF-42BE-B5A0-17BBDA40CF89}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C07A69AC-002A-4D45-A143-6B1B5C55B990}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C07A69AC-002A-4D45-A143-6B1B5C55B990}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C07A69AC-002A-4D45-A143-6B1B5C55B990}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C07A69AC-002A-4D45-A143-6B1B5C55B990}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3689094D-B888-4604-AB1C-97EC4EFF24A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3689094D-B888-4604-AB1C-97EC4EFF24A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3689094D-B888-4604-AB1C-97EC4EFF24A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3689094D-B888-4604-AB1C-97EC4EFF24A3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{3689094D-B888-4604-AB1C-97EC4EFF24A3} = {026C2D60-DC8C-41A2-8BB6-A18C3EAC8C84}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {270D4AC5-F5BF-454E-A9F5-B17DEAE68504}
+	EndGlobalSection
+EndGlobal

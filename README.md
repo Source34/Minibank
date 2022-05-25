@@ -1,2 +1,2 @@
-# Minibank
- 
+# MiniBank
+## Author - Zvezdin Roman
