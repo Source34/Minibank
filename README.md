@@ -1,4 +1,4 @@
-# MiniBank
+# MiniBank Tinkoff Fintech
 ## Author - Zvezdin Roman
 
 Демо проект, моделирующий работу приложения банка. 
